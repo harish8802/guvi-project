@@ -1,5 +1,4 @@
 $(document).ready(function () {
-  // validating form inputs ;
   $("#login-form").validate();
   $("#alert").hide();
 
@@ -15,10 +14,9 @@ $(document).ready(function () {
         success: function (response) {
           console.log(response);
           if (response != "Login Failed check your email and password !") {
-            // let responseJSON = JSON.parse(response);
-            // let {email,password} = responseJSON;
+          
             localStorage.setItem("Auth", response);
-            //  console.log(localStorage.getItem("Auth"));
+       
             window.location = "profile.html";
           } else {
             $("#alert").show();
