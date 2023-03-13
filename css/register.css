@@ -24,16 +24,7 @@
 
    #form-switch {
     display:none
-  }/*
-  #register-form {
-    display:none
-  }*/
- /* #form-switch:checked~#register-form {
-    display:block
-  } 
-  #form-switch:checked~#login-form {
-    display:none
-  }   */
+  }
   .reg{
   padding: 2rem;
   border:0.6px solid grey;
@@ -43,5 +34,4 @@
   .hacc{
     margin-top: 10px;
 
-  /* background-color: red; */
   }
