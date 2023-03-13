@@ -1,20 +1,11 @@
 <?php
 
-// print_r($_POST);
-// session_start();
 $dbhost= "127.0.0.1";
-// $dbhost = "localhost";
 $dbuser = "root";
 $dbpass = '';
 $dbname = "guvi";
 
 $conn = new mysqli($dbhost,$dbuser,$dbpass,$dbname);
-
-
-// session_start()
-// if(isset($_SESSION['email'])){
-//     header("location:profile.html");
-// }
 
 
 if($conn->connect_error){
@@ -25,7 +16,7 @@ if((isset($_POST['action']) && $_POST['action'])=='login')
 {
     session_start();
     $email = $_POST['email'];
-    $password = sha1($_POST['password']);//password hashing algorith;
+    $password = sha1($_POST['password']);
     
 
     $stmt_l = $conn ->prepare("SELECT * FROM users WHERE email=? AND pass=?");
@@ -42,10 +33,6 @@ if((isset($_POST['action']) && $_POST['action'])=='login')
         $myObj->email = $email;
         
         $myJSON = json_encode($myObj);
-
-        // $object->x = $email;
-        // $object->y = $password;
-        // echo $object;
   echo  $myJSON;
   
         if(!empty($_POST['rem'])){
