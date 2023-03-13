@@ -1,0 +1,15 @@
+/* Profile form styling */
+#profile-form {
+	margin-top: 20px;
+}
+
+#update-message {
+	margin-top: 10px;
+}
+
+/* Center the form */
+.row {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
