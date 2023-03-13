@@ -1,5 +1,4 @@
 $(document).ready(function() {
-  // Retrieve user profile data and populate the form
   $.ajax({
       url: 'get_profile.php',
       type: 'GET',
@@ -16,12 +15,11 @@ $(document).ready(function() {
       }
   });
 
-  // Handle form submit
+
   $('#profile-form').submit(function(e) {
       e.preventDefault();
       var formData = $(this).serialize();
 
-      // Submit form data to update user profile
       $.ajax({
           url: 'update_profile.php',
           type: 'POST',
